@@ -11,8 +11,9 @@ public class Car extends Vehicle {
 		return 10;
 	}
 
-	@Override
-	public String toString() {
-		return "Car [numWheels=" + this.getNumWheels() + ", colour=" + this.getColour() + "]";
-	}
+//	@Override
+//	public String toString() {
+//		System.out.println(this.id);
+//		return "Car [numWheels=" + this.getNumWheels() + ", colour=" + this.getColour() + "]";
+//	}
 }

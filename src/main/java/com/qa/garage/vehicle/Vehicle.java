@@ -2,17 +2,17 @@ package com.qa.garage.vehicle;
 
 public abstract class Vehicle {
 
-	private static int count = 0;
+	private static int count = 1;
 
 	private int numWheels;
 
 	private String colour;
 
-	private final int id;
+	public final int id;
 
 	public Vehicle(int numWheels, String colour) {
 		super();
-		this.id = count++;
+		this.id = count;
 		count++;
 		this.numWheels = numWheels;
 		this.colour = colour;
@@ -46,7 +46,8 @@ public abstract class Vehicle {
 
 	@Override
 	public String toString() {
-		return "Vehicle [numWheels=" + this.numWheels + ", colour=" + this.colour + "]";
+//		System.out.println(this.id);
+		return "Vehicle [id=" + this.id + ", numWheels=" + this.numWheels + ", colour=" + this.colour + "]";
 	}
 
 }

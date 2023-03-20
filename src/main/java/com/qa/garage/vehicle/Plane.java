@@ -11,8 +11,8 @@ public class Plane extends Vehicle {
 		return 23;
 	}
 
-	@Override
-	public String toString() {
-		return "Plane [numWheels=" + this.getNumWheels() + ", colour=" + this.getColour() + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Plane [numWheels=" + this.getNumWheels() + ", colour=" + this.getColour() + "]";
+//	}
 }
