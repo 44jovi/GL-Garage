@@ -12,6 +12,8 @@ public class Garage {
 
 	private List<Vehicle> vehicles = new ArrayList<>();
 
+	private List<Billable> billables = new ArrayList<>();
+
 	public boolean addVehicle(Vehicle v) {
 		return this.vehicles.add(v);
 	}
@@ -69,6 +71,16 @@ public class Garage {
 				toRemove.add(v);
 		}
 		return this.vehicles.removeAll(toRemove);
+	}
+
+	public boolean addBillable(Billable b) {
+		return this.billables.add(b);
+	}
+
+	public void returnBillablesTotal() {
+		for (Billable b : this.billables) {
+			System.out.println(b.calcBill());
+		}
 	}
 
 	@Override
