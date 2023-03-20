@@ -43,7 +43,7 @@ public class Employee implements Billable {
 
 	@Override
 	public int calcBill() {
-		return 0;
+		return 1;
 	}
 
 }

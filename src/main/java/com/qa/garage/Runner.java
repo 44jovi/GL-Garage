@@ -12,9 +12,9 @@ public class Runner {
 		g.addVehicle(new Car(4, "Black"));
 		g.addVehicle(new Boat(0, "Blue"));
 		g.addVehicle(new Bike(2, "Red"));
-		g.addVehicle(new Car(3, "red"));
-		g.addVehicle(new Car(4, "green"));
-		g.addVehicle(new Bike(2, "yellow"));
+		g.addVehicle(new Car(3, "Red"));
+		g.addVehicle(new Car(4, "Green"));
+		g.addVehicle(new Bike(2, "Yellow"));
 
 		System.out.println(g);
 
@@ -22,12 +22,11 @@ public class Runner {
 		g.remove(Car.class);
 		System.out.println(g);
 
-		g.addBillable(new Car(4, "orange"));
-		g.addBillable(new Bike(2, "orange"));
+		g.addBillable(new Car(4, "Orange"));
+		g.addBillable(new Bike(2, "Brown"));
 		g.addBillable(new Employee("Bob", 44, "Engine Expert"));
 
 		g.returnBillablesTotal();
-
 	}
 
 }
