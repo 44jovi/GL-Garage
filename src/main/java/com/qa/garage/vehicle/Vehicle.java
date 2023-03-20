@@ -8,7 +8,7 @@ public abstract class Vehicle {
 
 	private String colour;
 
-	public final int id;
+	private final int id;
 
 	public Vehicle(int numWheels, String colour) {
 		super();
