@@ -46,7 +46,8 @@ public abstract class Vehicle {
 
 	@Override
 	public String toString() {
-//		System.out.println(this.id);
+		// TODO: consider how to have each sub class override this
+		// while still including ID
 		return "Vehicle [id=" + this.id + ", numWheels=" + this.numWheels + ", colour=" + this.colour + "]";
 	}
 
