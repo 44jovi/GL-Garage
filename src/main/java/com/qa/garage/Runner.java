@@ -22,6 +22,12 @@ public class Runner {
 		g.remove(Car.class);
 		System.out.println(g);
 
+		g.addBillable(new Car(4, "orange"));
+		g.addBillable(new Bike(2, "orange"));
+		g.addBillable(new Employee("Bob", 44, "Engine Expert"));
+
+		g.returnBillablesTotal();
+
 	}
 
 }
