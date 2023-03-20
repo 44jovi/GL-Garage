@@ -13,10 +13,7 @@ public class Runner {
 		g.addVehicle(new Boat(0, "Blue"));
 		g.addVehicle(new Bike(2, "Red"));
 		g.addVehicle(new Car(3, "red"));
-		g.addVehicle(new Car(3, "green"));
-		g.addVehicle(new Car(3, "green"));
-		g.addVehicle(new Car(3, "green"));
-		g.addVehicle(new Car(3, "green"));
+		g.addVehicle(new Car(4, "green"));
 
 		System.out.println(g);
 
