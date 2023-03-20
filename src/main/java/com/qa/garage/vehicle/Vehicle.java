@@ -1,6 +1,8 @@
 package com.qa.garage.vehicle;
 
-public abstract class Vehicle {
+import com.qa.garage.Billable;
+
+public abstract class Vehicle implements Billable {
 
 	private static int count = 1;
 
@@ -50,5 +52,4 @@ public abstract class Vehicle {
 		// while still including ID
 		return "Vehicle [id=" + this.id + ", numWheels=" + this.numWheels + ", colour=" + this.colour + "]";
 	}
-
 }
