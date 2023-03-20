@@ -14,6 +14,7 @@ public class Runner {
 		g.addVehicle(new Bike(2, "Red"));
 		g.addVehicle(new Car(3, "red"));
 		g.addVehicle(new Car(4, "green"));
+		g.addVehicle(new Bike(2, "yellow"));
 
 		System.out.println(g);
 
