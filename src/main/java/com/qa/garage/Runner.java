@@ -1,5 +1,7 @@
 package com.qa.garage;
 
+import java.util.Scanner;
+
 import com.qa.garage.vehicle.Bike;
 import com.qa.garage.vehicle.Boat;
 import com.qa.garage.vehicle.Car;
@@ -28,12 +30,20 @@ public class Runner {
 
 		g.returnBillablesTotal();
 
+		// TODO: Use a scanner to take in the id
+		// TODO: Close the scanner in a finally
+		// TODO: Close the scanner in a try-with-resources
+
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Search by Vehicle ID - please enter ID:");
+		int userInput = scan.nextInt();
+
 		try {
-			g.findById(100);
+			g.findById(userInput);
 		} catch (VehicleNotFoundException e) {
 			System.out.println(e);
 		} finally {
-			System.out.println("TESTING THE FINALLY");
+			System.out.println("Try again.");
 		}
 	}
 

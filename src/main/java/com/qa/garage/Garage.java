@@ -90,7 +90,7 @@ public class Garage {
 			}
 		}
 
-		throw new VehicleNotFoundException("ID may be invalid. Try again");
+		throw new VehicleNotFoundException("Vehicle ID may be invalid.");
 	}
 
 	@Override
