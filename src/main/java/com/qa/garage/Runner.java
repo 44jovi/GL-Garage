@@ -46,16 +46,35 @@ public class Runner {
 //		}
 
 		// Automatically closing the scanner with try-with-resources block
-		try (Scanner scan = new Scanner(System.in)) {
-			System.out.println("Search by Vehicle ID - please enter ID:");
-			int userInput = scan.nextInt();
-			System.out.println("Thanks, you entered Vehicle ID " + userInput);
+//		try (Scanner scan = new Scanner(System.in)) {
+//			System.out.println("Search by Vehicle ID - please enter ID:");
+//			int userInput = scan.nextInt();
+//			System.out.println("Thanks, you entered Vehicle ID " + userInput);
+//
+//			try {
+//				System.out.println(g.findById(userInput));
+//			} catch (VehicleNotFoundException e) {
+//				System.out.println(e);
+//			}
+//		}
 
-			try {
-				System.out.println(g.findById(userInput));
-			} catch (VehicleNotFoundException e) {
-				System.out.println(e);
+		// Loop the scanner until user quits
+		try (Scanner scan = new Scanner(System.in)) {
+			int userInput = 99;
+
+			while (userInput != 0) {
+				System.out.println("Search by Vehicle ID - please enter ID (enter 0 to quit):");
+				userInput = scan.nextInt();
+
+				System.out.println("Thanks, you entered Vehicle ID " + userInput);
+
+				try {
+					System.out.println(g.findById(userInput));
+				} catch (VehicleNotFoundException e) {
+					System.out.println(e);
+				}
 			}
+
 		}
 	}
 
