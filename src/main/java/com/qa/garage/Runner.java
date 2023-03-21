@@ -71,9 +71,9 @@ public class Runner {
 					userInput = scan.nextInt();
 					System.out.println("Thanks, you entered Vehicle ID " + userInput);
 					System.out.println(g.findById(userInput));
-				} catch (VehicleNotFoundException e) {
-					System.out.println(e);
-				} catch (InputMismatchException e) {
+				} catch (VehicleNotFoundException vnfe) {
+					System.out.println(vnfe);
+				} catch (InputMismatchException ime) {
 					System.out.println("- - Goodbye! - -");
 					break;
 				}
