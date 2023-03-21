@@ -83,12 +83,14 @@ public class Garage {
 		}
 	}
 
-	public Vehicle findById(int id) {
+	public Vehicle findById(int id) throws VehicleNotFoundException {
 		for (Vehicle v : this.vehicles) {
 			if (v.getId() == id) {
 				return v;
 			}
 		}
+
+		throw new VehicleNotFoundException("ID may be invalid.; Try again");
 	}
 
 	@Override
