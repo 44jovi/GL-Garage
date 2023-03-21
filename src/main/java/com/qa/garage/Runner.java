@@ -27,6 +27,14 @@ public class Runner {
 		g.addBillable(new Employee("Bob", 44, "Engine Expert"));
 
 		g.returnBillablesTotal();
+
+		try {
+			g.findById(100);
+		} catch (VehicleNotFoundException e) {
+			System.out.println(e);
+		} finally {
+			System.out.println("TESTING THE FINALLY");
+		}
 	}
 
 }

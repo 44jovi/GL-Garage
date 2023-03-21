@@ -90,7 +90,7 @@ public class Garage {
 			}
 		}
 
-		throw new VehicleNotFoundException("ID may be invalid.; Try again");
+		throw new VehicleNotFoundException("ID may be invalid. Try again");
 	}
 
 	@Override
@@ -98,4 +98,8 @@ public class Garage {
 		return "Garage [vehicles=" + this.vehicles + "]";
 	}
 
+//	public static void main(String[] args) throws VehicleNotFoundException {
+//		Garage test = new Garage();
+//		System.out.println(test.findById(100));
+//	}
 }
