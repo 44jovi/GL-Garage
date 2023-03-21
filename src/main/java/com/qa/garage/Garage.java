@@ -83,6 +83,14 @@ public class Garage {
 		}
 	}
 
+	public Vehicle findById(int id) {
+		for (Vehicle v : this.vehicles) {
+			if (v.getId() == id) {
+				return v;
+			}
+		}
+	}
+
 	@Override
 	public String toString() {
 		return "Garage [vehicles=" + this.vehicles + "]";
