@@ -30,22 +30,32 @@ public class Runner {
 
 		g.returnBillablesTotal();
 
-		// TODO: Use a scanner to take in the id
-		// TODO: Close the scanner in a finally
-		// TODO: Close the scanner in a try-with-resources
+		// "Manually" closing the scanner:
+//		Scanner scan = new Scanner(System.in);
+//		System.out.println("Search by Vehicle ID - please enter ID:");
+//		int userInput = scan.nextInt();
+//		System.out.println("Thanks, you entered Vehicle ID " + userInput);
+//
+//		try {
+//			System.out.println(g.findById(userInput));
+//		} catch (VehicleNotFoundException e) {
+//			System.out.println(e);
+//		} finally {
+//			System.out.println("Try again.");
+//			scan.close();
+//		}
 
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Search by Vehicle ID - please enter ID:");
-		int userInput = scan.nextInt();
-		System.out.println("Thanks, you entered Vehicle ID " + userInput);
+		// Automatically closing the scanner with try-with-resources block
+		try (Scanner scan = new Scanner(System.in)) {
+			System.out.println("Search by Vehicle ID - please enter ID:");
+			int userInput = scan.nextInt();
+			System.out.println("Thanks, you entered Vehicle ID " + userInput);
 
-		try {
-			System.out.println(g.findById(userInput));
-		} catch (VehicleNotFoundException e) {
-			System.out.println(e);
-		} finally {
-			System.out.println("Try again.");
-			scan.close();
+			try {
+				System.out.println(g.findById(userInput));
+			} catch (VehicleNotFoundException e) {
+				System.out.println(e);
+			}
 		}
 	}
 
