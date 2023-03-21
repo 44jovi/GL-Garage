@@ -39,7 +39,7 @@ public class Runner {
 		int userInput = scan.nextInt();
 
 		try {
-			g.findById(userInput);
+			System.out.println(g.findById(userInput));
 		} catch (VehicleNotFoundException e) {
 			System.out.println(e);
 		} finally {
