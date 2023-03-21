@@ -37,6 +37,7 @@ public class Runner {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Search by Vehicle ID - please enter ID:");
 		int userInput = scan.nextInt();
+		System.out.println("Thanks, you entered Vehicle ID " + userInput);
 
 		try {
 			System.out.println(g.findById(userInput));
@@ -44,6 +45,7 @@ public class Runner {
 			System.out.println(e);
 		} finally {
 			System.out.println("Try again.");
+			scan.close();
 		}
 	}
 
