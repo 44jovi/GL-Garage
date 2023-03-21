@@ -1,5 +1,6 @@
 package com.qa.garage;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.qa.garage.vehicle.Bike;
@@ -63,19 +64,21 @@ public class Runner {
 			int userInput = 99;
 
 			while (userInput != 0) {
-				System.out.println("Search by Vehicle ID - please enter ID (enter 0 to quit):");
-				userInput = scan.nextInt();
-
-				System.out.println("Thanks, you entered Vehicle ID " + userInput);
 
 				try {
+					System.out.println("Search by Vehicle ID - please enter ID (enter a non-number to quit):");
+					userInput = scan.nextInt();
+
+					System.out.println("Thanks, you entered Vehicle ID " + userInput);
 					System.out.println(g.findById(userInput));
 				} catch (VehicleNotFoundException e) {
 					System.out.println(e);
+				} catch (InputMismatchException e) {
+					System.out.println("Goodbye!");
+					break;
 				}
 			}
 
 		}
 	}
-
 }
