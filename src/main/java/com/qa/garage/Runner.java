@@ -61,18 +61,20 @@ public class Runner {
 
 		// Loop the scanner until user quits
 		try (Scanner scan = new Scanner(System.in)) {
+
 			int userInput = 1;
 
 			while (userInput != 0) {
 				try {
-					System.out.println("Search by Vehicle ID - please enter ID (enter a non-number to quit):");
+					System.out.println(
+							"- - Search by Vehicle ID - please enter ID - - \n- - (Enter any letter to quit.) - -");
 					userInput = scan.nextInt();
 					System.out.println("Thanks, you entered Vehicle ID " + userInput);
 					System.out.println(g.findById(userInput));
 				} catch (VehicleNotFoundException e) {
 					System.out.println(e);
 				} catch (InputMismatchException e) {
-					System.out.println("Goodbye!");
+					System.out.println("- - Goodbye! - -");
 					break;
 				}
 			}
